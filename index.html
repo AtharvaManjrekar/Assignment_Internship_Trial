@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Rota: shift scheduling for cafés</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="logo" href="#top"><i></i>Rota</a>
+        <button
+          class="burger"
+          id="burger"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          Menu
+        </button>
+        <nav id="nav">
+          <a href="#features">Features</a><a href="#how">How it works</a
+          ><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
+          <a class="btn" href="#contact" data-plan="Starter">Get started</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap">
+          <div>
+            <h1>The rota your café team won’t argue about.</h1>
+            <p class="lead">
+              Rota builds the weekly shift schedule for small cafés and
+              restaurants. Staff say when they can work, you fill the gaps,
+              everyone gets a text.
+            </p>
+            <div class="row">
+              <a class="btn" href="#contact" data-plan="Starter">Start free</a
+              ><a class="btn ghost" href="#how">See how it works</a>
+            </div>
+          </div>
+          <div
+            class="board"
+            aria-label="Interactive demo of a weekly shift board"
+          >
+            <div class="board-top">
+              <b>Week of 23 Nov</b><span>Corner Bean Café</span>
+            </div>
+            <div class="grid" id="grid"></div>
+            <p class="hint">
+              Tap a shift to change it. <b id="open">0</b> shifts still open.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="wrap">
+          <div class="head"><h2>Built for the Monday morning panic.</h2></div>
+          <div class="fgrid">
+            <article class="fc big">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="17" rx="3" />
+                <path d="M8 2v4M16 2v4M3 10h18M8 15h3" />
+              </svg>
+              <h3>A week’s schedule in two minutes</h3>
+              <p>
+                Copy last week, change what’s different, publish. Rota flags
+                double bookings and anyone going over their hours before you
+                send it.
+              </p>
+              <div class="flags">
+                <div class="flag">Dev is double-booked on Tuesday</div>
+                <div class="flag">Sana is at 41 hours this week</div>
+                <div class="flag good">Thursday opening shift is covered</div>
+              </div>
+            </article>
+            <article class="fc">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M7 16l-4 4V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2H7z"
+                />
+              </svg>
+              <h3>Texts, not apps</h3>
+              <p>
+                Shifts arrive by SMS or WhatsApp. Nobody has to install or log
+                in to anything.
+              </p>
+            </article>
+            <article class="fc">
+              <svg viewBox="0 0 24 24">
+                <path d="M17 3l4 4-4 4M21 7H8M7 21l-4-4 4-4M3 17h13" />
+              </svg>
+              <h3>Shift swaps that sort themselves</h3>
+              <p>
+                Staff offer a shift, a teammate takes it, you approve with one
+                tap.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="how" id="how">
+        <div class="wrap">
+          <h2>From blank week to published in three steps.</h2>
+          <div class="steps">
+            <div class="step">
+              <h3>Add your team</h3>
+              <p>
+                Paste in names and phone numbers. Set roles like barista,
+                kitchen or floor.
+              </p>
+            </div>
+            <div class="step">
+              <h3>Collect availability</h3>
+              <p>
+                Each person gets a text link to mark the days they can’t work.
+                It takes them under a minute.
+              </p>
+            </div>
+            <div class="step">
+              <h3>Fill the board and publish</h3>
+              <p>
+                Drag people into shifts. Rota warns you about gaps, then texts
+                the final rota to everyone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing">
+        <div class="wrap">
+          <div class="ptop">
+            <h2>Pay for the size of your team.</h2>
+            <div class="toggle" role="group" aria-label="Billing period">
+              <button id="mo" aria-pressed="true">Monthly</button
+              ><button id="yr" aria-pressed="false">
+                Yearly, 2 months free
+              </button>
+            </div>
+          </div>
+          <div class="plans">
+            <div class="plan">
+              <h3>Starter</h3>
+              <div class="price">$0</div>
+              <small>forever</small>
+              <ul>
+                <li>Up to 5 staff</li>
+                <li>1 location</li>
+                <li>Email notifications</li>
+              </ul>
+              <a class="btn ghost" href="#contact" data-plan="Starter"
+                >Start free</a
+              >
+            </div>
+            <div class="plan pop">
+              <h3>Team</h3>
+              <div class="price">
+                <span class="amt" data-m="29" data-y="24">$29</span
+                ><small> /month</small>
+              </div>
+              <ul>
+                <li>Up to 25 staff</li>
+                <li>SMS and WhatsApp alerts</li>
+                <li>Shift swaps</li>
+                <li>Hours and overtime report</li>
+              </ul>
+              <a class="btn" href="#contact" data-plan="Team">Choose Team</a>
+            </div>
+            <div class="plan">
+              <h3>Group</h3>
+              <div class="price">
+                <span class="amt" data-m="79" data-y="66">$79</span
+                ><small> /month</small>
+              </div>
+              <ul>
+                <li>Unlimited staff</li>
+                <li>Up to 10 locations</li>
+                <li>Payroll export</li>
+                <li>Priority support</li>
+              </ul>
+              <a class="btn ghost" href="#contact" data-plan="Group"
+                >Choose Group</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="wrap">
+          <div>
+            <h2>See Rota with your own team.</h2>
+            <p class="s">
+              Book a 20-minute demo. We’ll set up one week of your schedule
+              while you watch.
+            </p>
+            <address>
+              hello@rota-demo.com<br />+91 98765 43210<br />Mon to Fri, 9am to
+              6pm IST
+            </address>
+          </div>
+          <form id="form" novalidate>
+            <label
+              >Your name<input id="name" autocomplete="name" /><span
+                class="err"
+              ></span
+            ></label>
+            <label
+              >Work email<input
+                id="email"
+                type="email"
+                autocomplete="email" /><span class="err"></span
+            ></label>
+            <label
+              >Plan you’re interested in<select id="plan">
+                <option>Starter</option>
+                <option>Team</option>
+                <option>Group</option>
+              </select></label
+            >
+            <label
+              >Anything we should know?<textarea id="msg" rows="3"></textarea>
+            </label>
+            <button class="btn" type="submit">Book my demo</button>
+            <div class="ok" id="ok" role="status"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span
+          >© 2026 Rota. A demo product built for a front-end assignment.</span
+        ><span
+          ><a href="#features">Features</a> &nbsp;
+          <a href="#pricing">Pricing</a> &nbsp;
+          <a href="#top">Back to top</a></span
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
